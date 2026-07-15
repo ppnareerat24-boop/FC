@@ -1,11 +1,5 @@
 {
   "cleanUrls": true,
-  "builds": [
-    { "src": "api/faceapi.js", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/faceapi/(.*)", "dest": "api/faceapi.js" }
-  ]
   "framework": null,
   "buildCommand": null,
   "outputDirectory": "."
