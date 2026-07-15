@@ -2,7 +2,7 @@
 
 const DB = (() => {
   // point this at your backend (api/server.js). default: same origin /faceapi
-  const API = window.FACE_API || '/faceapi';
+  const API = window.FACE_API || '';
   const TOKEN_KEY = 'faceAdminToken';
   const token = () => localStorage.getItem(TOKEN_KEY) || '';
 
