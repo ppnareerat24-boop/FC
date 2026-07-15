@@ -49,6 +49,4 @@ const DB = (() => {
     addUser, getUsers, deleteUser, checkIn, updateAttendanceReason,
     getAttendance, clearAttendance, dateKeyOf, login, logout, isLoggedIn,
   };
-  let p = (new URL(req.url, 'http://x').pathname).replace(/\/+$/, '') || '/';
-  if (p.startsWith('/faceapi')) p = p.slice('/faceapi'.length) || '/';
-})();
+  })();
