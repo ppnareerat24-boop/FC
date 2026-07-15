@@ -2,7 +2,7 @@
 
 const DB = (() => {
   // point this at your backend (api/server.js). default: same origin /faceapi
-  const API = window.FACE_API || '';
+  const API = window.FACE_API || '/faceapi';
   const TOKEN_KEY = 'faceAdminToken';
   const token = () => localStorage.getItem(TOKEN_KEY) || '';
 
@@ -49,4 +49,6 @@ const DB = (() => {
     addUser, getUsers, deleteUser, checkIn, updateAttendanceReason,
     getAttendance, clearAttendance, dateKeyOf, login, logout, isLoggedIn,
   };
+  let p = (new URL(req.url, 'http://x').pathname).replace(/\/+$/, '') || '/';
+  if (p.startsWith('/faceapi')) p = p.slice('/faceapi'.length) || '/';
 })();
